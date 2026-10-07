@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hall Student Issues</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🏠 Hall Student Issue Portal</h1>
+    <p>Report issues anonymously or openly</p>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Submit an Issue</h2>
+      <form id="issueForm">
+        <label>Your Name (optional)</label>
+        <input type="text" id="name" placeholder="Anonymous">
+
+        <label>Room Number</label>
+        <input type="text" id="room" placeholder="e.g., B-204" required>
+
+        <label>Category</label>
+        <select id="category" required>
+          <option value="">-- Select --</option>
+          <option>Plumbing</option>
+          <option>Electrical</option>
+          <option>Cleanliness</option>
+          <option>Furniture</option>
+          <option>Security</option>
+          <option>Other</option>
+        </select>
+
+        <label>Describe the Issue</label>
+        <textarea id="message" rows="5" required></textarea>
+
+        <button type="submit">Submit Issue</button>
+      </form>
+      <p id="status"></p>
+    </section>
+
+    <section class="issues-section">
+      <h2>Recent Issues</h2>
+      <div id="issuesList">Loading...</div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
